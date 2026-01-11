@@ -1,0 +1,127 @@
+/*  =======================
+    table of content
+    =======================
+    01- card
+    02- drinks
+    The css layouts for all of these elements are on the main css page
+    03- (Navbar, Menu, Reservation, footer, price content, media screen )
+*/
+
+
+.Main-Menu .Text-Main {
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.Main-Menu .Text-Main h1 {
+    font-weight: bold;
+    color: var(--color);
+}
+
+
+/* =========== cards ============ */
+.Main-Menu .card {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    transition: var(--transition);
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px #dadab2;
+    color: #ccc;
+}
+
+.Main-Menu .card:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+}
+
+.Main-Menu .card .img-Menu img {
+    border-radius: 50%;
+}
+
+.Main-Menu .card .card-text h3 {
+    color: var(--color);
+}
+
+.Main-Menu .card .card-text .price {
+    color: #d90101;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.Main-Menu .card .btn {
+    background: var(--color);
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.Main-Menu .card .btn:hover {
+    color: var(--color-text);
+}
+
+
+/* =========== drinks ============ */
+.drinks .drink {
+    padding: 15px 8px;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #dadab2;
+    transition: var(--transition);
+}
+
+.drinks .drink:hover {
+    box-shadow: none;
+}
+
+.drinks .drink .item-drink {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+    margin: auto;
+}
+
+.drinks .drink button {
+    background: var(--color);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.drinks .drink button:hover {
+    font-size: 1rem;
+}
+
+.drinks .drink .price {
+    text-align: center;
+    padding: 10px;
+    background: var(--color);
+    width: max-content;
+    margin: auto;
+    color: #d90101;
+    font-weight: bold;
+}
+
+.drinks .drink .title-dirnk {
+    padding: 10px;
+    background: var(--color);
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}

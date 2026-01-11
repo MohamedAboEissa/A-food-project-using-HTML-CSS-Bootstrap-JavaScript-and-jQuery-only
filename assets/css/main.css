@@ -1,0 +1,933 @@
+/*  =======================
+    table of content
+    =======================
+    01- Global Rules
+    02- Navbar
+    03- header
+    04- Offers
+    05- Menu
+    06- Events
+    07- Reservation
+    08- footer
+    09- price content
+    10- media screen
+*/
+
+:root {
+    --color: #ffc553;
+    --color-text: #ffff;
+    --main-background: #1f1b32;
+    --background: #2a2442;
+    --transition: all 0.5s ease;
+    --after-content: '2';
+}
+
+/*===================================================
+================== Start Global Rules ===============
+================================================== */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    background: var(--main-background);
+    overflow-x: hidden;
+    color: var(--color-text);
+}
+
+.container {
+    width: 85%;
+}
+
+
+
+h2,
+h3,
+h4,
+h5 {
+    padding: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+::selection {
+    background: var(--color);
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+a {
+    color: var(--color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+
+
+/* ===================== Start Navbar  =========================== */
+.navbar {
+    background: #ffc045;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.navbar .navbar-brand img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.navbar .collapse ul {
+    position: absolute;
+    right: 0;
+    color: black;
+}
+
+.navbar .collapse ul li .nav-link {
+    color: var(--text-color);
+    padding: 8px 25px;
+}
+
+.navbar .collapse ul li .nav-link:hover {
+    text-shadow: 1px 7px 5px var(--color-text);
+
+}
+
+/* ===================== End Navbar  =========================== */
+
+
+/* ===================== Start header  =========================== */
+header #video-background {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    top: 170px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+header #video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+header .container {
+    color: black;
+    position: relative;
+}
+
+header .header-item p {
+    border: 2px dashed var(--main-background);
+    text-align: center;
+}
+
+header .header-item h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 1px 7px 5px var(--color-text);
+}
+
+header .header-item div {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .social-media ul li {
+    margin-right: 10px;
+}
+
+header .social-media ul li a {
+    background-color: #313131;
+    color: #b9b9b9;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+header .social-media ul .facebook:hover {
+    background-color: #1877f2;
+}
+
+header .social-media ul .twitter:hover {
+    background-color: #1da1f2;
+}
+
+header .social-media ul .youtube:hover {
+    background-color: #ff0000;
+}
+
+header .img-header img {
+    border-radius: 50%;
+    width: 100%;
+    max-height: 360px;
+}
+
+/* ===================== End header  =========================== */
+
+
+/* ===================== Start Offers  ===========================- */
+.Offers .main-Offer,
+.Offers .Offer {
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Offers .main-Offer:hover,
+.Offers .Offer:hover {
+    transform: scale(1.1);
+}
+
+.Offers .main-Offer .Offer-text,
+.Offers .Offer .Offer-text {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Offers .main-Offer .Offer p,
+.Offers .Offer .Offer-text p {
+    margin-bottom: 0;
+}
+
+
+.Offers .main-Offer .Offer-text .price,
+.Offers .Offer .Offer-text .price {
+    background: var(--color);
+    width: max-content;
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.Offers .main-Offer .img-Offer img {
+    height: 425px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+.Offers .Offer .img-Offer img {
+    height: 200px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+.Offers .btn-order {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* -===================== End Offers  ===========================- */
+
+
+/* ===================== Start Menu  =========================== */
+.Menu .Main-Menu-Text span {
+    margin: 10px;
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: var(--color);
+    font-weight: bold;
+}
+
+.Menu .Main-Menu-Text h2 {
+    color: var(--color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Menu .ga-panel .btn-order {
+    margin-left: 33% !important;
+    position: absolute;
+    background: var(--color);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Menu .ga-panel p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.Menu a {
+    color: var(--color-text);
+    background: var(--color);
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 8px 25px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+/* ===================== End Menu  =========================== */
+
+
+/* ===================== Start Events  =========================== */
+.Events .carousel {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-shadow: 0px 0px 10px #dadab2;
+    transition: var(--transition);
+}
+
+.Events .carousel:hover {
+    box-shadow: none;
+}
+
+.Events .carousel-item .carousel-img {
+    width: 50%;
+    cursor: pointer;
+}
+
+.Events .carousel-item img {
+    height: 400px;
+    border-radius: 8px;
+}
+
+.Events .carousel-item .carousel-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 50%;
+    padding: 1rem;
+    color: #fff;
+    text-align: left;
+}
+
+.Events .carousel-item .carousel-caption span {
+    font-weight: bold;
+    padding: 8px 10px;
+    background: var(--color);
+    border-radius: 6px;
+}
+
+.Events .carousel-item .carousel-caption h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color);
+    margin-top: 10px;
+}
+
+.Events .carousel-indicators {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    left: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0%;
+    list-style: none;
+}
+
+.Events .carousel-indicators button {
+    border-radius: 50%;
+    color: var(--color);
+    width: 10px;
+    height: 8px;
+    background: var(--color);
+}
+
+
+/* ===================== End Events  ===========================- */
+
+
+/* ===================== Start Reservation  =========================== */
+.Reservation {
+    background: var(--color);
+    position: relative;
+}
+
+.Reservation .img-decoration:first-child {
+    width: 150px;
+    height: 150px;
+    top: 3px;
+    position: absolute;
+    animation: decoration01 3s linear infinite reverse;
+}
+
+@keyframes decoration01 {
+
+    0%,
+    100% {
+        transform: rotate(360deg);
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+}
+
+.Reservation .img-decoration:nth-child(2) {
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    animation: decoration02 5s linear infinite reverse;
+}
+
+@keyframes decoration02 {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: scale(0.8);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    70% {
+        top: 150px;
+    }
+
+    80% {
+        top: 200px;
+    }
+
+    100% {
+        transform: rotate(-25deg);
+    }
+}
+
+.Reservation .Reservation-text span {
+    margin: 10px;
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: var(--background);
+    font-weight: bold;
+}
+
+.Reservation .Reservation-text h3 {
+    color: var(--background);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.Reservation form .form-control {
+    margin: 10px 0;
+    font-weight: bold;
+    z-index: 9;
+}
+
+.Reservation form .form-control:focus {
+    border-color: var(--color);
+}
+
+.Reservation form button {
+    color: var(--color-text);
+    background: var(--background);
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 8px 25px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.Reservation .img-decoration:last-child {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    bottom: 10px;
+    right: -25px;
+    animation: decoration03 8s linear infinite reverse;
+}
+
+@keyframes decoration03 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* -===================== End Reservation  =========================== */
+
+
+/* ====================== Start footer  ========================= */
+footer .container {
+    background-image: url(../img/Footer.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+footer .masked {
+    background: rgba(19, 19, 22, 0.6);
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 10px;
+}
+
+footer .footer-brand {
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer .footer-text {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+footer .footer-brand img {
+    width: 150px;
+    height: 150px;
+}
+
+footer .contact {
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer .contact .Location,
+footer .contact .message {
+    margin: 20px 0;
+}
+
+footer .contact svg {
+    margin: 0 10px;
+    color: var(--color);
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+footer .copyright .contact-US ul {
+    display: flex;
+    align-items: center;
+}
+
+
+footer .copyright .contact-US ul li svg {
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+footer .copyright .contact-US ul li svg:hover {
+    color: var(--color);
+}
+
+/* ====================== End footer  ========================= */
+
+
+/* ====================== Start price content  ========================= */
+.price-content {
+    display: none;
+}
+
+.price-content .totals {
+    position: relative;
+    cursor: pointer;
+}
+
+.price-content .totals .total-price {
+    text-align: center;
+    font-weight: bold;
+    padding: 25px;
+    background: var(--color);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 6%;
+    z-index: 99;
+    display: none;
+}
+
+.price-content .totals .number-products {
+    display: none;
+}
+
+.price-content .totals .number-products {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: var(--bs-danger);
+    padding: 4px 8px;
+    border-radius: 50px;
+    display: block;
+}
+
+.price-content .required-products {
+    background: var(--background);
+    padding: 10px 30px;
+    overflow: auto;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 5%;
+    left: 7.5%;
+    width: 85%;
+    height: 0;
+    z-index: 9;
+    box-shadow: 0px 0px 10px #dadab2;
+    display: none;
+    transition: var(--transition);
+}
+
+.price-content:hover .required-products {
+    display: block;
+    transition: var(--transition);
+    animation: top-product 1s ease-in-out forwards;
+}
+
+@keyframes top-product {
+    0% {
+        height: 15%;
+    }
+
+    100% {
+        height: 80%;
+    }
+}
+
+
+.price-content .required-products::-webkit-scrollbar {
+    width: 20px;
+}
+
+.price-content .required-products::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.price-content .required-products::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+    border-radius: 10px;
+}
+
+.price-content .required-products .product {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 5px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--main-background);
+    position: relative;
+    box-shadow: 0px 0px 10px #dadab2;
+    transition: var(--transition);
+}
+
+.price-content .required-products .product:hover {
+    box-shadow: none;
+}
+
+.price-content .required-products .product .product-img {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.price-content .required-products .product .product-img img {
+    height: 180px;
+    transition: var(--transition);
+}
+
+.price-content .required-products .product .product-img img:hover {
+    transform: scale(1.2);
+}
+
+.price-content .required-products .product .cancel {
+    background: var(--background);
+    border-radius: 50%;
+    color: #d90101;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #dadab2;
+}
+
+.price-content .required-products .product .name-product {
+    color: var(--color);
+}
+
+.price-content .required-products .product-number {
+    border: 2px solid var(--color);
+    border-radius: 8px;
+    padding: 5px;
+    width: max-content;
+}
+
+.price-content .required-products .checkout {
+    color: var(--color-text);
+    background: var(--color);
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 8px 25px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+/* ====================== End price content  ========================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================  Responsive to all screens  ========================= */
+/*----------- middle screen -----------*/
+@media screen and (max-width: 992px) {
+
+    /* ----- navbar ----- */
+    .navbar-toggler {
+        border: 1px solid black;
+    }
+
+    .navbar .collapse ul {
+        position: relative;
+    }
+
+    /* ----- Offer ----- */
+    .Offers .Offer .img-Offer img {
+        height: 250px;
+    }
+}
+
+
+/*----------- Small screen -----------*/
+@media screen and (max-width: 768px) {
+
+    /* ----- Events ----- */
+    .Events .carousel-item .carousel-img {
+        width: 100%;
+    }
+
+    .Events .carousel-item .carousel-img img {
+        height: 300px;
+    }
+
+
+    .Events .carousel-item .carousel-caption {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .Events .carousel-indicators {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-right: 15%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 15%;
+        list-style: none;
+    }
+
+    /* -------Reservation  --------- */
+    .Reservation .img-decoration:nth-child(2) {
+        top: 280px;
+        left: 35px;
+    }
+
+
+}
+
+
+/*----------- phone screen -----------*/
+@media screen and (max-width: 576px) {
+
+    /* ----- Offer ----- */
+    .Offers .main-Offer .img-Offer img {
+        height: 300px;
+    }
+
+    /* -------  Menu  --------- */
+    .grid-accordion .ga-panel .price {
+        font-size: 3rem;
+    }
+
+    .grid-accordion .ga-panel .btn-order {
+        font-size: 4rem;
+        margin-left: 20% !important;
+    }
+
+
+    /* -------Reservation  --------- */
+    .Reservation .img-decoration:first-child {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Reservation .img-decoration:nth-child(2) {
+        top: 0;
+        left: auto;
+        right: 0;
+    }
+
+    .Reservation .img-decoration:last-child {
+        width: 120px;
+        height: 120px;
+        bottom: 0;
+    }
+
+    /* ----- footer ------- */
+    footer .footer-brand {
+        display: block;
+        text-align: center;
+    }
+
+    footer .footer-brand img {
+        margin: auto;
+    }
+
+    footer .footer-text {
+        width: 100%;
+    }
+
+    footer .contact {
+        top: 0;
+        left: 10%;
+        transform: translate(0%, 0%);
+    }
+
+    footer .copyright {
+        display: block;
+    }
+
+    footer .copyright .contact-US ul {
+        justify-content: center;
+    }
+
+
+    /* ------- price content  -------- */
+    .price-content .required-products .product {
+        display: block;
+        justify-content: center;
+    }
+
+}
+
+/* ======================  Responsive to all screens  ========================= */
